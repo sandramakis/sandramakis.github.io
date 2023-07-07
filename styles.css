@@ -1,0 +1,179 @@
+/* TABLE OF CONTENT 
+---- Order of Styles-----
+1. General Styling
+2. Group (Tag) Styles
+3. Main
+4. Intersection and hidden styles
+5. Media Query
+
+*/
+
+/* General */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Group Styling */
+
+p {
+  line-height: 1.6rem;
+}
+
+section {
+  padding: 1rem;
+}
+
+/* Header Styles */
+
+header.main-heading {
+  position: fixed;
+  width: 100%;
+  height: 13%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  background-color: #bface2;
+  z-index: 2;
+}
+
+div.menu--container {
+  background-color: #bface2;
+}
+
+span.menu-icon--span {
+  cursor: pointer;
+}
+
+div.menu--icon {
+  height: 3px;
+  width: 30px;
+  margin-top: 4px;
+  background-color: #666;
+}
+
+div.list--item {
+  cursor: pointer;
+  padding: 15px 30px;
+  text-decoration: underline;
+  transition: ease-in-out 3s;
+}
+
+div.list--item:hover,
+span.menu-icon--span:hover {
+  opacity: 0.7;
+  font-size: 15px;
+  text-decoration: underline;
+}
+
+/* Main Body */
+main {
+  z-index: 0;
+}
+
+section.intro,
+section.skills,
+section.projects div {
+  background-color: #a084dc;
+}
+
+section.intro {
+  padding: 7rem 2rem;
+}
+
+section header {
+  padding: 1.5rem 0;
+  letter-spacing: 2px;
+}
+
+section.about-me,
+section.projects {
+  background-color: #bface2;
+}
+
+section.projects div {
+  padding: 1rem 0.5rem;
+  margin: 0.5rem 0;
+  border: 1px solid rgb(231, 69, 231);
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+section.projects div h5 {
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+p.language-used {
+  color: red;
+  text-align: center;
+}
+
+/* Intersection and Hidden styles */
+
+.hidden {
+  display: none;
+  margin-left: 10rem;
+}
+
+/* MEDIA QUERY AND SCREEN SIZE */
+/* small screen size */
+@media screen and (max-width: 768px) {
+  div.menu--container {
+    margin-left: 9.5rem;
+    position: absolute;
+    top: 25%;
+    left: 40%;
+  }
+
+  /* span.menu-list--span {
+    width: 100vw;
+  } */
+}
+
+/* large screen size */
+@media screen and (min-width: 768px) {
+  header.main-heading {
+    width: 100%;
+    height: 10%;
+  }
+
+  header.main-heading .first-h3 {
+    width: 20%;
+  }
+
+  header.main-heading,
+  .menu-list--span {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .menu-icon--span {
+    display: none;
+  }
+
+  div.list--item {
+    text-decoration: none;
+  }
+
+  div.list--item:hover {
+    text-decoration: underline;
+    font-size: 17px;
+  }
+
+  section.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: right;
+    gap: 20px;
+    row-gap: 15px;
+  }
+}
