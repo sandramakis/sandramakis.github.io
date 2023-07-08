@@ -75,7 +75,7 @@ span.cv--span:hover {
 
 /* Main Body */
 main {
-  z-index: 0;
+  z-index: 1;
 }
 
 section.intro,
@@ -123,11 +123,19 @@ p.language-used {
   letter-spacing: 1px;
 }
 
-/* Intersection and Hidden styles */
+/* Hidden and Overlay styles */
 
 .hidden {
   display: none;
   margin-left: 10rem;
+}
+
+.overlay {
+  height: 100vh;
+  width: 100vw;
+  z-index: 0;
+  margin: 2.6rem -1rem 0 -1rem;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 /* Icons */
@@ -141,6 +149,7 @@ p.language-used {
   padding: 0;
   font-size: 15px;
 }
+
 /* Box Shadow */
 section.projects div,
 header.main-heading,
@@ -180,6 +189,7 @@ span.cv--span .fa {
     position: absolute;
     top: 30%;
     left: 37%;
+    background-color: #bface2;
   }
 }
 
