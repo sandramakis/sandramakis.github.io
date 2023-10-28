@@ -59,3 +59,10 @@ document.addEventListener("keydown", function (event) {
 
 // Menu closes when clicked outside the box
 overlay.addEventListener("click", menuUpdate);
+
+// Update year at the footer
+const footerYear = document.querySelector(".year");
+const date = new Date();
+const currentYear = date.getFullYear();
+footerYear.textContent = currentYear;
+console.log(footerYear);

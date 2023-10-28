@@ -79,25 +79,29 @@ span.cv--span:hover {
 }
 
 /* Main Body */
-section.intro,
-section.skills,
+
+/* SECTIONS */
+section:nth-child(odd),
 section.projects div {
   background-color: #a084dc;
+}
+
+section:nth-child(even),
+span.cv--span {
+  background-color: #bface2;
 }
 
 section.intro {
   padding-top: 6rem;
 }
 
+section.skills {
+  padding: 0;
+}
+
 section header {
   padding: 1.5rem 0;
   letter-spacing: 2px;
-}
-
-section.about-me,
-section.projects,
-span.cv--span {
-  background-color: #bface2;
 }
 
 section.projects div {
@@ -180,6 +184,12 @@ a.resume {
 span.cv--span .fa {
   font-size: 15px;
   padding: 0 5px;
+}
+
+/* FOOTER */
+footer {
+  display: grid;
+  place-content: center;
 }
 
 /* MEDIA QUERY AND SCREEN SIZE */
