@@ -24,11 +24,11 @@
 
       <div class="menu--container">
         <span class="menu-list--span">
-          <div class="list--item">Home</div>
-          <div class="list--item">About Me</div>
-          <div class="list--item">Skills</div>
-          <div class="list--item">Projects</div>
-          <div class="list--item">Contact Me</div>
+          <div class="list--item"><a href="#home">Home</a></div>
+          <div class="list--item"><a href="#about">About</a></div>
+          <div class="list--item"><a href="#skills">Skills</a></div>
+          <div class="list--item"><a href="#projects">Projects</a></div>
+          <div class="list--item"><a href="#contact">Contact Me</a></div>
         </span>
 
         <span class="menu-icon--span">
@@ -42,7 +42,7 @@
     <div class="overlay"></div>
     <main>
       <!-- INTRO -->
-      <section class="intro">
+      <section id="home" class="intro">
         <p>Hello! My name is</p>
         <h3>Sandra Nwakeze.</h3>
         <p>
@@ -62,18 +62,18 @@
       </section>
 
       <!-- ABOUT ME -->
-      <section class="about-me">
+      <section id="about" class="about-me">
         <header class="">
           <h3><span style="color: purple">A.</span> About Me</h3>
         </header>
 
         <p class="hidden">
-          My journey in web development began a few years ago, as an
-          undergraduate of the University of Nigeria, Nsukka pursuing a degree
-          in B.A History and International Studies where I leared of how the
-          world evolves and how the world is slowly becoming technologized.Since
-          then, I have developed a strong proficiency in learning web
-          development and has used various front-end frameworks.
+          My journey in web development began a few years ago, around 2020, as
+          an undergraduate of the University of Nigeria, Nsukka pursuing a
+          degree in B.A History and International Studies where I leared of how
+          the world evolves and how the world is slowly becoming
+          technologized.Since then, I have developed a strong proficiency in
+          learning web development and has used various front-end frameworks.
         </p>
         <br />
         <p class="hidden">
@@ -113,16 +113,13 @@
       </section>
 
       <!-- SKILLS -->
-      <section class="skills">
+      <section id="skills" class="skills">
         <header>
           <h3><span style="color: purple">B.</span> Skills</h3>
         </header>
 
         <!-- Skills List -->
-        <section
-          style="background-color: #bface2"
-          class="skills--list grid-container"
-        >
+        <section class="skills--list grid-container">
           <!-- 1 -->
           <div class="hidden">
             <i class="fa fa-solid fa-code-branch"></i>
@@ -173,7 +170,7 @@
       </section>
 
       <!-- PROJECTS -->
-      <section class="projects">
+      <section id="projects" class="projects">
         <header>
           <h3><span style="color: purple">C.</span> Projects</h3>
         </header>
@@ -192,7 +189,7 @@
               <p class="language-used">HTML, CSS, JavaScript</p>
               <a
                 href="https://vercel.com/sandramakis/pig-game/77J1jMSq8XzjkpLMvdn8gMc9vopS"
-                ><i class="fa fa-solid fa-external-link"></i
+                class="fa fa-solid fa-external-link"
               ></a>
             </span>
           </div>
@@ -210,8 +207,9 @@
             <span class="languages">
               <p class="language-used">HTML, CSS, JavaScript</p>
 
-              <a href="https://guess-my-number-sandramakis.vercel.app/"
-                ><i class="fa fa-solid fa-external-link"></i
+              <a
+                href="https://guess-my-number-sandramakis.vercel.app/"
+                class="fa fa-solid fa-external-link"
               ></a>
             </span>
           </div>
@@ -252,24 +250,58 @@
             </p>
             <br />
             <span class="languages">
-              <p class="language-used">HTML, CSS</p>
-              <i class="fa fa-solid fa-external-link"><a href=""></a></i>
+              <p class="language-used">HTML, CSS, JavaScript</p>
+              <a
+                href="https://makis-photogallery.vercel.app/"
+                class="fa fa-solid fa-external-link"
+              ></a>
             </span>
           </div>
         </section>
       </section>
 
-      <footer class="hidden">
-        <a href="https://twitter.com/SandraMakis"
-          ><i class="fa-brands fa-x-twitter"></i
+      <section id="contact" class="contact">
+        <header>
+          <h3><span style="color: purple">D.</span> Contact Me</h3>
+        </header>
+        <form class="hidden" action="">
+          <p>
+            Do you like my portfolio and would want to work with me? <br />Send
+            me a mail. I'll be waiting!
+          </p>
+          <input
+            type="text"
+            class="senders-name"
+            name="name"
+            placeholder="Subject"
+          />
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            placeholder="Message here"
+          ></textarea>
+          <button>
+            <a href="mailto:sandramakis.dev@gmail.com">Send E-mail</a>
+          </button>
+        </form>
+      </section>
+
+      <footer class="footer">
+        <a
+          href="https://twitter.com/SandraMakis"
+          class="fa-brands fa-x-twitter"
         ></a>
-        <a href="http://linkedin.com/in/sandra-nwakeze"
-          ><i class="fa-brands fa-linkedin"></i
+        <a
+          href="http://linkedin.com/in/sandra-nwakeze"
+          class="fa-brands fa-linkedin"
         ></a>
-        <a href="https://github.com/sandramakis"
-          ><i class="fa-brands fa-github"></i
+        <a
+          href="https://github.com/sandramakis"
+          class="fa-brands fa-github"
         ></a>
-        <p>Sandra Makis |</p>
+        <p>| Sandra Makis |</p>
         <p class="year"></p>
       </footer>
     </main>
