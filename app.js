@@ -1,58 +1,61 @@
 "use strict";
-// Menu variables
-const menuContainer = document.querySelector(".menu--container");
-const menu = document.querySelector(".menu-icon--span");
 
-// Each menu Icon
+// Intersector for animations
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("shown");
+    } else {
+      entry.target.classList.add("hidden");
+    }
+  });
+});
+
+// Add intersector on elements
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((el) => observer.observe(el));
+
+// MENU ICON
+const menuIconSpan = document.querySelector(".menu-icon--span");
+const menuListSpan = document.querySelector(".menu-list--span");
+
+// All list items
 const menuIcon1 = document.querySelector(".menu--icon--1");
 const menuIcon2 = document.querySelector(".menu--icon--2");
 const menuIcon3 = document.querySelector(".menu--icon--3");
 
-// Elements to hide
-const iconToHide = document.querySelector(".menu--icon");
-const hiddenMenu = document.querySelector(".menu-list--span");
-
-// All list items
-const listItems = document.getElementsByClassName("list--item");
-
 // Overlay
-const overlay = document.querySelector(".display-overlay");
+const overlay = document.querySelector(".overlay");
+const main = document.querySelector("main");
 
-// Clear Menu List Function
-const clearMenu = function () {
-  hiddenMenu.classList.add("hidden");
-  overlay.classList.remove("overlay");
-  menuIcon1.style.transform = "none";
-  menuIcon2.style.transform = "none";
-  menuIcon3.classList.remove("hidden");
-};
+// Menu Update ftn
+function menuUpdate() {
+  // main.appendChild(overlay);
+  // main.classList.toggle("overlay-added");
 
-// Menu event listener
-menu.addEventListener("click", function () {
-  hiddenMenu.classList.toggle("hidden");
-  overlay.classList.toggle("overlay");
-  if (!hiddenMenu.classList.contains("hidden")) {
-    // Change the angle for icons when displayed
-    menuIcon1.style.transform = "rotate(240deg)";
-    menuIcon2.style.transform = "rotate(120deg)";
+  menuListSpan.classList.toggle("menu-display");
 
-    menuIcon3.classList.add("hidden");
+  menuIcon3.classList.toggle("hide-third-icon");
+  menuIcon2.classList.toggle("rotate-icon-2");
+  menuIcon1.classList.toggle("rotate-icon-1");
 
-    // Add a transition to the icons
-    menuIcon2.style.transform = "ease-in-out 3s";
-    listItems.style.transition = "ease-in-out 3s";
-  } else {
-    clearMenu();
-  }
-});
+  const icons = document.querySelectorAll(".menu-icon");
+  icons.forEach((icon) => {
+    icon.style.transition = "ease-in 0.5s";
+  });
+}
+
+// event listener on the menu icon span
+menuIconSpan.addEventListener("click", menuUpdate);
 
 // Make the icons close with the Escape key
 document.addEventListener("keydown", function (event) {
   console.log(event.key);
-  if (event.key === "Escape") clearMenu();
+  if (event.key === "Escape") menuUpdate();
 
-  if (hiddenMenu.classList.contains("hidden")) clearMenu();
+  if (menuListSpan.classList.contains("hidden")) menuUpdate();
 });
 
 // Menu closes when clicked outside the box
-overlay.addEventListener("click", clearMenu);
+overlay.addEventListener("click", menuUpdate);

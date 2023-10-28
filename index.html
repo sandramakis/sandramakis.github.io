@@ -17,34 +17,34 @@
   </head>
   <body>
     <header class="main-heading">
-      <div class="first-h3">
+      <div class="first-h3 hidden">
         <h3>Sandra Makis</h3>
-        <div class="display-overlay"></div>
+        <p><em>Frontend Web Developer</em></p>
       </div>
 
       <div class="menu--container">
-        <span class="menu-icon--span">
-          <div class="menu--icon menu--icon--1"></div>
-          <div class="menu--icon menu--icon--2"></div>
-          <div class="menu--icon menu--icon--3"></div>
-        </span>
-
-        <span class="menu-list--span hidden">
+        <span class="menu-list--span">
           <div class="list--item">Home</div>
           <div class="list--item">About Me</div>
           <div class="list--item">Skills</div>
           <div class="list--item">Projects</div>
           <div class="list--item">Contact Me</div>
         </span>
+
+        <span class="menu-icon--span">
+          <div class="menu--icon menu--icon--1"></div>
+          <div class="menu--icon menu--icon--2"></div>
+          <div class="menu--icon menu--icon--3"></div>
+        </span>
       </div>
     </header>
 
+    <div class="overlay"></div>
     <main>
       <!-- INTRO -->
       <section class="intro">
         <p>Hello! My name is</p>
         <h3>Sandra Nwakeze.</h3>
-        <p>Frontend Web Developer</p>
         <p>
           I'm from Nigeria, Makis is short for my given name Chiamaka. I'm a
           skilled and creative front-end developer with a passion for crafting
@@ -63,18 +63,20 @@
 
       <!-- ABOUT ME -->
       <section class="about-me">
-        <header>
+        <header class="">
           <h3><span style="color: purple">A.</span> About Me</h3>
         </header>
 
-        <p>
+        <p class="hidden">
           My journey in web development began a few years ago, as an
           undergraduate of the University of Nigeria, Nsukka pursuing a degree
-          in B.A History and International Studies, and since then, I have
-          developed a strong proficiency in various front-end frameworks.
+          in B.A History and International Studies where I leared of how the
+          world evolves and how the world is slowly becoming technologized.Since
+          then, I have developed a strong proficiency in learning web
+          development and has used various front-end frameworks.
         </p>
         <br />
-        <p>
+        <p class="hidden">
           My goal is to create engaging and user-friendly websites that not only
           look great but also deliver exceptional user experiences. I strive to
           stay up-to-date with the latest industry trends and technologies to
@@ -82,7 +84,8 @@
           front-end development, ensuring that my work is always at the
           forefront of industry standards.
         </p>
-        <p>
+        <br />
+        <p class="hidden">
           I thrive in collaborative environments and enjoy working closely with
           designers and back-end developers to bring projects to life.I have a
           meticulous eye for detail and a knack for creating intuitive user
@@ -92,7 +95,7 @@
         </p>
         <br />
 
-        <p>
+        <p class="hidden">
           I believe in continuous learning and I'm always eager to expand my
           skill set. I'm open to new challenges and enjoy finding innovative
           solutions to complex problems. I believe that every user should have a
@@ -101,7 +104,7 @@
           my coat to back-end and Web3, so I'm working towards that.
         </p>
         <br />
-        <p>
+        <p class="hidden">
           Please feel free to explore my portfolio to see some of my past
           projects and get a sense of my skills and style. If you have any
           questions or would like to discuss potential collaborations, please
@@ -118,7 +121,7 @@
         <!-- Skills List -->
         <section class="skills--list grid-container">
           <!-- 1 -->
-          <div>
+          <div class="hidden">
             <i class="fa fa-solid fa-code-branch"></i>
             <h4>Version Control System</h4>
             <p>
@@ -133,7 +136,7 @@
           </div>
 
           <!-- 2 -->
-          <div>
+          <div class="hidden">
             <i class="fa fa-solid fa-laptop-code"></i>
             <h4>Frontend Frameworks</h4>
             <p>
@@ -146,7 +149,7 @@
           </div>
 
           <!-- 3 -->
-          <div>
+          <div class="hidden">
             <i class="fa fa-solid fa-laptop-mobile"></i>
             <h4>Responsive Web Design</h4>
             <p>
@@ -174,7 +177,7 @@
 
         <section class="grid-container">
           <!-- 1 -->
-          <div class="grid-item">
+          <div class="grid-item hidden">
             <h5>Pig Game</h5>
             <p>
               A dice game between two players, each player takes a turn to roll
@@ -189,7 +192,7 @@
           </div>
 
           <!-- 2 -->
-          <div class="grid-item">
+          <div class="grid-item hidden">
             <h5>Guess My Number</h5>
             <p>
               The user is expected to guess the correct number as the computer.
@@ -205,7 +208,7 @@
           </div>
 
           <!-- 3 -->
-          <div class="grid-item">
+          <div class="grid-item hidden">
             <h5>Task Manager</h5>
             <p>
               A task organizer that helps you manage daily to-do's and when
