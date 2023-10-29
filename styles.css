@@ -159,6 +159,11 @@ p.language-used {
   padding: 10px 0;
 }
 
+.fa-mobile-screen {
+  font-size: 22px;
+  padding: 12px 0;
+}
+
 .fa-external-link {
   padding: 0;
   font-size: 15px;
