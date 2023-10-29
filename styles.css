@@ -164,6 +164,15 @@ p.language-used {
   font-size: 15px;
 }
 
+.fa-brands {
+  font-size: 25px;
+}
+
+.fa-x-twitter,
+.fa-github {
+  background-color: black;
+}
+
 /* Box Shadow */
 section.projects div,
 header.main-heading,
@@ -228,7 +237,7 @@ footer {
   justify-content: space-evenly;
   align-items: center;
   font-family: "Courier New", Courier, monospace;
-  padding: 10px;
+  padding: 1rem 0.5rem;
 }
 
 /* MEDIA QUERY AND SCREEN SIZE */
