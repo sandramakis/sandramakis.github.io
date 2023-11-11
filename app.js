@@ -29,12 +29,16 @@ const menuIcon3 = document.querySelector(".menu--icon--3");
 const overlay = document.querySelector(".overlay");
 const main = document.querySelector("main");
 
+// get the nav bar to add fixed position
+const nav = document.querySelector("nav");
+
 // Menu Update ftn
 function menuUpdate() {
   // main.appendChild(overlay);
   // main.classList.toggle("overlay-added");
 
   menuListSpan.classList.toggle("menu-display");
+  document.body.classList.toggle("menu-display");
 
   menuIcon3.classList.toggle("hide-third-icon");
   menuIcon2.classList.toggle("rotate-icon-2");
@@ -46,13 +50,21 @@ function menuUpdate() {
   });
 }
 
+// Update year at the footer
+const footerYear = document.querySelector(".year");
+const date = new Date();
+const currentYear = date.getFullYear();
+footerYear.textContent = currentYear;
+
+// Event listeners
+
 // event listener on the menu icon span
 menuIconSpan.addEventListener("click", menuUpdate);
 
 // Make the icons close with the Escape key
-document.addEventListener("keydown", function (event) {
-  console.log(event.key);
-  if (event.key === "Escape") menuUpdate();
+document.addEventListener("keydown", function (e) {
+  console.log(e.key);
+  if (e.key === "Escape") menuUpdate();
 
   if (menuListSpan.classList.contains("hidden")) menuUpdate();
 });
@@ -60,9 +72,19 @@ document.addEventListener("keydown", function (event) {
 // Menu closes when clicked outside the box
 overlay.addEventListener("click", menuUpdate);
 
-// Update year at the footer
-const footerYear = document.querySelector(".year");
-const date = new Date();
-const currentYear = date.getFullYear();
-footerYear.textContent = currentYear;
-console.log(footerYear);
+// listen for when the nav bar reaches the top of the screen
+const topOfNav = nav.offsetTop;
+
+function fixNav() {
+  console.log(window.scrollY, topOfNav);
+
+  if (window.scrollY >= topOfNav) {
+    document.querySelector("main").style.paddingTop = `${nav.offsetHeight}px`;
+    document.body.classList.add("fixed-nav");
+  } else {
+    document.querySelector("main").style.paddingTop = 0;
+    document.body.classList.remove("fixed-nav");
+  }
+}
+
+window.addEventListener("scroll", fixNav);

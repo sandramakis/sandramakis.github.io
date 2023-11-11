@@ -16,27 +16,31 @@
     <title>MAKIS PORTFOLIO</title>
   </head>
   <body>
-    <header class="main-heading">
-      <div class="first-h3 hidden">
-        <h3>Sandra Makis</h3>
-        <p><em>Frontend Web Developer</em></p>
-      </div>
+    <header class="first-header">
+      <img src="img/Makis.jpg" alt="display pics" id="my-picture" />
 
-      <div class="menu--container">
-        <span class="menu-list--span">
-          <div class="list--item"><a href="#home">Home</a></div>
-          <div class="list--item"><a href="#about">About</a></div>
-          <div class="list--item"><a href="#skills">Skills</a></div>
-          <div class="list--item"><a href="#projects">Projects</a></div>
-          <div class="list--item"><a href="#contact">Contact Me</a></div>
-        </span>
+      <nav class="main-heading">
+        <div class="first-h3 hidden">
+          <h3>Sandra Makis</h3>
+          <p><em>Frontend Web Developer</em></p>
+        </div>
 
-        <span class="menu-icon--span">
-          <div class="menu--icon menu--icon--1"></div>
-          <div class="menu--icon menu--icon--2"></div>
-          <div class="menu--icon menu--icon--3"></div>
-        </span>
-      </div>
+        <div class="menu--container">
+          <span class="menu-list--span">
+            <div class="list--item"><a href="#home">Home</a></div>
+            <div class="list--item"><a href="#about">About</a></div>
+            <div class="list--item"><a href="#skills">Skills</a></div>
+            <div class="list--item"><a href="#projects">Projects</a></div>
+            <div class="list--item"><a href="#contact">Contact Me</a></div>
+          </span>
+
+          <span class="menu-icon--span">
+            <div class="menu--icon menu--icon--1"></div>
+            <div class="menu--icon menu--icon--2"></div>
+            <div class="menu--icon menu--icon--3"></div>
+          </span>
+        </div>
+      </nav>
     </header>
 
     <div class="overlay"></div>
@@ -56,7 +60,7 @@
         <!-- ADD RESUME PDF LINK HERE -->
         <br />
         <span class="cv--span">
-          <a class="resume" href="resume/Sandra Nwakeze.pdf">Resume</a>
+          <a class="resume" href="img/Sandra Nwakeze.pdf">Resume</a>
           <i class="fa fa-file-pdf-o"></i>
         </span>
       </section>
@@ -116,6 +120,15 @@
       <section id="skills" class="skills">
         <header>
           <h3><span style="color: purple">B.</span> Skills</h3>
+          <div class="sticker-image">
+            <img
+              src="img/programming.png"
+              alt="girl programming"
+              id="pro-sticker"
+              height="30%"
+              width="30%"
+            />
+          </div>
         </header>
 
         <!-- Skills List -->
@@ -130,8 +143,8 @@
               managing commits.
             </p>
             <p>
-              Proficient in using GitHub pages and third-party hosts like vercel
-              to host static websites and showcase projects.
+              Proficient in using GitHub pages and third-party hosts like Vercel
+              and Netlify to host static websites and showcase projects.
             </p>
           </div>
 
@@ -280,17 +293,40 @@
             </span>
           </div>
 
+          <!-- 5 -->
           <div class="grid-item hidden">
-            <h5>Photo Gallery</h5>
+            <h5>Text to Speech</h5>
             <p>
-              A simple gallery album displaying different pictures at different
-              pixel sizes
+              Ever want another voice to speak for you? Or even translate some
+              words for you? I built this text to speech website, all you need
+              is to input the text(s) you'd like to hear and choose a voice.
+              Viola! <br />
+              Also, you can increase or reduce the pitch and speed of the speech
+              ☺
             </p>
             <br />
             <span class="languages">
               <p class="language-used">HTML, CSS, JavaScript</p>
               <a
-                href="https://makis-photogallery.vercel.app/"
+                href="https://text-to-speech-3.netlify.app/"
+                class="fa fa-solid fa-external-link"
+              ></a>
+            </span>
+          </div>
+
+          <!-- 6 -->
+          <div class="grid-item hidden">
+            <h5>Geolocation</h5>
+            <p>
+              simple site, once enabled, can display information depending on
+              your location, informations like your speed, latitude and
+              longitude. Don't worry, we don't have it in any data base! ☺
+            </p>
+            <br />
+            <span class="languages">
+              <p class="language-used">HTML, CSS, JavaScript</p>
+              <a
+                href="remarkable-lily-1c4c83.netlify.app/"
                 class="fa fa-solid fa-external-link"
               ></a>
             </span>

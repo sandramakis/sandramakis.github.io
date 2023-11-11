@@ -18,10 +18,10 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  font-size: 14px;
 }
 
 /* Group Styling */
-
 p {
   line-height: 1.6rem;
 }
@@ -31,7 +31,7 @@ a {
 }
 
 section,
-.skills header,
+.skills nav,
 section.skills--list {
   padding: 1rem;
 }
@@ -41,16 +41,17 @@ section.skills {
   padding-top: 3rem;
 }
 
-/* Header Styles */
+#projects h5 {
+  text-decoration: underline;
+}
 
-header.main-heading {
-  position: fixed;
-  width: 100%;
-  height: 10%;
+/* Nav Styles */
+
+nav {
   display: flex;
   justify-content: space-between;
-  align-items: start;
-  padding: 1rem;
+  align-items: center;
+  padding: 0.7rem;
   z-index: 2;
   background-color: #bface2;
 
@@ -62,6 +63,12 @@ header.main-heading {
     font-family: none;
     font-size: 15px;
   }
+}
+
+.fixed-nav nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 span.menu-icon--span {
@@ -108,13 +115,8 @@ section.contact {
 }
 
 section {
-  & header {
-    padding: 1.5rem 0;
-    letter-spacing: 2px;
-  }
-
   &.intro {
-    padding-top: 6rem;
+    padding-top: 2rem;
   }
 
   & .skills {
@@ -210,18 +212,27 @@ p.language-used {
 
 /* Box Shadow */
 section.projects div,
-header.main-heading,
+nav.main-heading,
 span.cv--span {
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
 }
 
 /* Images */
-img {
-  height: 10%;
-  width: 30%;
-  background-color: purple;
+
+header.first-header img#my-picture {
+  width: 100%;
+  /* height: 10rem; */
 }
 
+#pro-sticker {
+  padding: 1rem;
+}
+
+#skills .sticker-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* Resume */
 
 span.cv--span {
@@ -274,15 +285,17 @@ footer {
 }
 
 /* MEDIA QUERY AND SCREEN SIZE */
-/* small screen size */
-@media screen and (max-width: 768px) {
-  div.menu--container {
-    background-color: #bface2;
+/* SMALL screen size */
+@media screen and (max-width: 767px) {
+  .menu-display nav {
+    height: 10%;
+  }
+
+  .menu-display .menu--container {
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    z-index: 1;
-    margin-right: -0.3rem;
+    margin-top: 12rem;
+    background-color: #bface2;
+    transition: ease-in-out 0.3s;
   }
 
   .menu-list--span {
@@ -292,17 +305,16 @@ footer {
 
   .rotate-icon-2 {
     transform: rotate(230deg);
-    transition: all 0.5s;
+    transition: all 0.3s;
   }
 
   .rotate-icon-1 {
     transform: rotate(-230deg);
-    transition: all 0.5s;
+    transition: all 0.3s;
   }
 
   .menu-display {
     display: block;
-    transition: ease-in-out 0.5s;
   }
 
   .hide-third-icon {
@@ -315,7 +327,6 @@ footer {
     width: 100%;
     z-index: 0;
     background-color: rgba(0, 0, 0, 0.2);
-    /* margin: -0.001rem -1rem; */
   }
 
   div.soft--skills {
@@ -323,22 +334,15 @@ footer {
   }
 }
 
-/* large screen size */
-@media screen and (min-width: 767px) {
-  header.main-heading {
-    width: 100%;
-    height: 10%;
-
-    & .first-h3 {
-      width: 20%;
-    }
-  }
-
-  header.main-heading,
+/* LARGE screen size */
+@media screen and (min-width: 768px) {
   .menu-list--span {
+    background-color: #bface2;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
+    z-index: 1;
+    margin-right: -0.3rem;
   }
 
   .menu-icon--span {
@@ -371,6 +375,5 @@ footer {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    /* flex: 1 1; */
   }
 }
