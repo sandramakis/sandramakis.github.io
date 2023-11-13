@@ -74,15 +74,21 @@ overlay.addEventListener("click", menuUpdate);
 
 // listen for when the nav bar reaches the top of the screen
 const topOfNav = nav.offsetTop;
+const sections = document.querySelectorAll("section");
 
 function fixNav() {
   console.log(window.scrollY, topOfNav);
 
   if (window.scrollY >= topOfNav) {
-    document.querySelector("main").style.paddingTop = `${nav.offsetHeight}px`;
+    sections.forEach((section) => {
+      section.style.paddingTop = `${nav.offsetHeight}px`;
+    });
     document.body.classList.add("fixed-nav");
   } else {
     document.querySelector("main").style.paddingTop = 0;
+    sections.forEach((section) => {
+      section.style.paddingTop = 0;
+    });
     document.body.classList.remove("fixed-nav");
   }
 }
