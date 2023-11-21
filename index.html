@@ -82,32 +82,13 @@
         <br />
         <p class="hidden">
           My goal is to create engaging and user-friendly websites that not only
-          look great but also deliver exceptional user experiences. I strive to
-          stay up-to-date with the latest industry trends and technologies to
-          ensure that my work reflects modern standards and best practices in
-          front-end development, ensuring that my work is always at the
-          forefront of industry standards.
-        </p>
-        <br />
-        <p class="hidden">
-          I thrive in collaborative environments and enjoy working closely with
-          designers and back-end developers to bring projects to life.I have a
-          meticulous eye for detail and a knack for creating intuitive user
-          experiences. I have a strong ability to translate design concepts into
-          responsive and interactive websites, ensuring seamless functionality
-          across different devices and browsers.
+          look great but also deliver exceptional user experiences.I have a
+          strong ability to translate design concepts into responsive and
+          interactive websites, ensuring seamless functionality across different
+          devices and browsers.
         </p>
         <br />
 
-        <p class="hidden">
-          I believe in continuous learning and I'm always eager to expand my
-          skill set. I'm open to new challenges and enjoy finding innovative
-          solutions to complex problems. I believe that every user should have a
-          seamless experience, regardless of the device they are using or any
-          accessibility challenge they may face. In the future, I hope to expand
-          my coat to back-end and Web3, so I'm working towards that.
-        </p>
-        <br />
         <p class="hidden">
           Please feel free to explore my portfolio to see some of my past
           projects and get a sense of my skills and style. If you have any
@@ -122,6 +103,7 @@
           <h3><span style="color: purple">B.</span> Skills</h3>
           <div class="sticker-image">
             <img
+              class="hidden"
               src="img/programming.png"
               alt="girl programming"
               id="pro-sticker"
@@ -142,10 +124,6 @@
               repositories, branching, merging and resolving conflicts, and
               managing commits.
             </p>
-            <p>
-              Proficient in using GitHub pages and third-party hosts like Vercel
-              and Netlify to host static websites and showcase projects.
-            </p>
           </div>
 
           <!-- 2 -->
@@ -153,11 +131,9 @@
             <i class="fa fa-solid fa-laptop-code"></i>
             <h4>Frontend Frameworks</h4>
             <p>
-              While I'm proficient in using Bootstrap, Tailwind and partly SASS,
-              HTML, CSS and vanilla Javascript are my strong suit in making
-              interactive and functional websites. I understand the importance
-              of other programming frameworks which I'm yet to acquire, but I
-              must in due time.
+              While I'm proficient in using Bootstrap, Tailwind and partly
+              ReactJS, HTML, CSS and Vanilla Javascript are my strong suit in
+              making interactive and functional websites.
             </p>
           </div>
 
@@ -167,11 +143,9 @@
             <h4>Responsive Web Design</h4>
             <p>
               Small screens (phone screens less than 368px) tend to be a problem
-              when it comes to displaying these websites or apps. I have become
-              familiar with these development. The solution that works for me is
-              the "small screen first", then larger screens. I enure that
-              websites display change dynamically depending on the viewport
-              ranging from laptops to tablets to phones.
+              when it comes to displaying these websites or apps. The solution
+              that works for me is the "small screen first" to ensuring websites
+              displays dynamically depending on the viewport.
             </p>
           </div>
         </section>
@@ -219,118 +193,104 @@
           <h3><span style="color: purple">C.</span> Projects</h3>
         </header>
 
-        <section class="grid-container">
+        <section class="slider">
+          <span class="arrow left" id="previous"><</span>
+          <span class="arrow right" id="next">></span>
           <!-- 1 -->
-          <div class="grid-item hidden">
+          <div class="hidden slide">
             <h5>Pig Game</h5>
+            <a
+              href="https://pig-game-o06gpo093-sandramakis.vercel.app/"
+              class="fa fa-solid fa-external-link"
+            >
+              <img src="img/pig-game.png" alt="pig game" />
+            </a>
             <p>
               A dice game between two players, each player takes a turn to roll
               a dice and accumulates the total points rolled. However, if a
               player rolls a one, s/he looses the accumulated points.
             </p>
-            <br />
-            <span class="languages">
-              <p class="language-used">HTML, CSS, JavaScript</p>
-              <a
-                href="https://pig-game-o06gpo093-sandramakis.vercel.app/"
-                class="fa fa-solid fa-external-link"
-              ></a>
-            </span>
           </div>
 
           <!-- 2 -->
-          <div class="grid-item hidden">
+          <div class="hidden slide">
             <h5>Guess My Number</h5>
+            <a
+              href="https://guess-my-number-sandramakis.vercel.app/"
+              class="fa fa-solid fa-external-link"
+            >
+              <img src="img/guess-my-num.png" alt="" />
+            </a>
             <p>
               The user is expected to guess the correct number as the computer.
               S/he has 20 chances of getting it right with guidelines on wether
               the guessed number is higher or greater than what the computer
               has.
             </p>
-            <br />
-            <span class="languages">
-              <p class="language-used">HTML, CSS, JavaScript</p>
-
-              <a
-                href="https://guess-my-number-sandramakis.vercel.app/"
-                class="fa fa-solid fa-external-link"
-              ></a>
-            </span>
           </div>
 
           <!-- 3 -->
-          <div class="grid-item hidden">
+          <div class="hidden slide">
             <h5>Drum Kit</h5>
+            <a
+              href="https://vocal-drum-kit.netlify.app/"
+              class="fa fa-solid fa-external-link"
+            >
+              <img src="img/drum-kit.png" alt="" />
+            </a>
             <p>
               As the name implies, it's a sound box game that plays different
               music sounds once they're clicked. <br />
               Let's play a sound game. Are you ready?
             </p>
-            <br />
-            <span class="languages">
-              <p class="language-used">HTML, CSS, JavaScript</p>
-              <a
-                href="https://vocal-drum-kit.netlify.app/"
-                class="fa fa-solid fa-external-link"
-              ></a>
-            </span>
           </div>
 
           <!-- 4 -->
-          <div class="grid-item hidden">
+          <div class="hidden slide">
             <h5>JS Clock</h5>
+            <a
+              href="https://css-js-animated-clock.netlify.app/"
+              class="fa fa-solid fa-external-link"
+            >
+              <img src="img/clock.png" alt="" />
+            </a>
             <p>
               A play with CSS rotate property that displays the current time of
               the day (in your location). The digital clock updates the second,
               minutes and hour of the day using a visual hand.
             </p>
-            <br />
-            <span class="languages">
-              <p class="language-used">HTML, CSS, JavaScript</p>
-              <a
-                href="https://css-js-animated-clock.netlify.app/"
-                class="fa fa-solid fa-external-link"
-              ></a>
-            </span>
           </div>
 
           <!-- 5 -->
-          <div class="grid-item hidden">
-            <h5>Text to Speech</h5>
+          <div class="hidden slide">
+            <h5>Geolocation</h5>
+            <a
+              href="remarkable-lily-1c4c83.netlify.app/"
+              class="fa fa-solid fa-external-link"
+            >
+              <img src="img/geolocation.png" alt="" />
+            </a>
             <p>
-              Ever want another voice to speak for you? Or even translate some
-              words for you? I built this text to speech website, all you need
-              is to input the text(s) you'd like to hear and choose a voice.
-              Viola! <br />
-              Also, you can increase or reduce the pitch and speed of the speech
-              ☺
+              A simple site, once enabled, can display information depending on
+              your location, informations like your speed, latitude and
+              longitude. Don't worry, we don't have it in any data base!☺
             </p>
-            <br />
-            <span class="languages">
-              <p class="language-used">HTML, CSS, JavaScript</p>
-              <a
-                href="https://text-to-speech-3.netlify.app/"
-                class="fa fa-solid fa-external-link"
-              ></a>
-            </span>
           </div>
 
           <!-- 6 -->
-          <div class="grid-item hidden">
-            <h5>Geolocation</h5>
+          <div class="hidden slide">
+            <h5>Text to Speech</h5>
+            <a
+              href="https://text-to-speech-3.netlify.app/"
+              class="fa fa-solid fa-external-link"
+            >
+              <img src="img/text-to-speech.png" alt="" />
+            </a>
             <p>
-              simple site, once enabled, can display information depending on
-              your location, informations like your speed, latitude and
-              longitude. Don't worry, we don't have it in any data base! ☺
+              Ever want another voice to speak for you? Or even translate some
+              words for you? All you need is to input the texts you'd like to
+              hear, choose a voice and speed it up Viola!
             </p>
-            <br />
-            <span class="languages">
-              <p class="language-used">HTML, CSS, JavaScript</p>
-              <a
-                href="remarkable-lily-1c4c83.netlify.app/"
-                class="fa fa-solid fa-external-link"
-              ></a>
-            </span>
           </div>
         </section>
       </section>
@@ -344,12 +304,12 @@
             Do you like my portfolio and would want to work with me? <br />Send
             me a mail. I'll be waiting!
           </p>
-          <input
+          <!-- <input
             type="text"
             class="senders-name"
             name="name"
             placeholder="Subject"
-          />
+          /> -->
           <textarea
             name="message"
             id="message"

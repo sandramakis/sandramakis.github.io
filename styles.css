@@ -100,6 +100,10 @@ span.cv--span:hover {
 
 /* Main Body */
 
+.overlay main section {
+  opacity: 0.8;
+}
+
 /* SECTIONS */
 section:nth-child(even),
 .skill,
@@ -110,7 +114,7 @@ footer {
 section:nth-child(odd),
 section.skills--list,
 span.cv--span,
-section.projects div,
+section.projects .slider,
 section.contact {
   background-color: #a084dc;
 }
@@ -125,10 +129,9 @@ section {
   }
 }
 
-section.projects div {
+section.projects div.hidden {
   padding: 1rem 0.5rem;
   margin: 0.5rem 0;
-  border: 1px solid rgb(231, 69, 231);
   border-radius: 10px;
   text-align: center;
 
@@ -213,7 +216,6 @@ p.language-used {
 }
 
 /* Box Shadow */
-section.projects div,
 nav.main-heading,
 span.cv--span {
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.4);
@@ -244,13 +246,63 @@ span.cv--span .fa {
   padding: 0 5px;
 }
 
+/* CAROUSEL */
+
+.slider {
+  width: 100%;
+  height: 80vh;
+  padding-bottom: 5rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  height: 350px;
+  width: 90%;
+}
+
+.slide img {
+  height: 350px;
+  width: 90%;
+  cursor: pointer;
+}
+
+#projects .arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 15px 10px;
+  cursor: pointer;
+}
+
+.arrow#next {
+  position: absolute;
+  right: 30px;
+}
+
+.arrow#previous {
+  position: absolute;
+  left: 20px;
+}
+
+.arrow:hover {
+  opacity: 0.7;
+}
+
+.arrow:active {
+  font-size: 20px;
+  transform: scale(1.1);
+}
+
 /* CONTACT ME */
-section.contact {
+section#contact {
   & form {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
+    display: grid;
+    place-items: center;
+    text-align: center;
   }
 
   & input,
@@ -265,8 +317,7 @@ section.contact {
   }
 
   & button {
-    padding: 10px;
-    margin: 20px;
+    padding: 5px;
     border-radius: 5px;
     border: none;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
@@ -286,7 +337,7 @@ footer {
 /* SMALL screen size */
 @media screen and (max-width: 767px) {
   .menu-display nav {
-    height: 10%;
+    height: 15%;
   }
 
   .menu-display .menu--container {
@@ -330,6 +381,10 @@ footer {
   div.soft--skills {
     padding: 0 4rem;
   }
+
+  div.soft--skills .skill {
+    margin: 10px;
+  }
 }
 
 /* LARGE screen size */
@@ -354,14 +409,6 @@ footer {
   div.list--item:hover {
     text-decoration: underline;
     font-size: 17px;
-  }
-
-  section.grid-container {
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-items: right;
-    gap: 20px;
-    row-gap: 15px;
   }
 
   .fa {
